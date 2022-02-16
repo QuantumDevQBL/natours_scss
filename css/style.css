@@ -69,6 +69,8 @@ body {
   left: 50%;
   /*these coordinates are relative to the element itself, not its parent*/
   transform: translate(-50%, -50%);
+
+  text-align: center;
 }
 
 .heading-primary {
@@ -77,6 +79,8 @@ body {
 
   /*this property decides if the backpart of the element during animation is visible to the user src:https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility*/
   backface-visibility: hidden;
+
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -133,4 +137,31 @@ body {
     opacity: 1;
     transform: translate(0);
   }
+}
+
+/*button styling*/
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
 }
