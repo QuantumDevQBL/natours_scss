@@ -6,6 +6,16 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+
+//Color variables
+
+$primary-color: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+$color-grey-dark: #777;
+$color-white: #fff;
+
 /*reset size of all elements using this universal selector*/
 *,
 *::after,
@@ -15,14 +25,16 @@ Dark green: #28b485
   /*this property helps us include padding and border in the width and height of the element*/
   /*box-sizing: border-box;*/
   /*We now inherit box-sizing from the body element*/
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 html {
   /*The rem unit multiply the root font-size so ten pixels is a simple value to keep track on the font through our css file*/
   /*font-size: 10px;*/
-  /*It's a good practive to put the font size in percentrage beacause we still use the root font size of the browser (16px) and we let the ability to the user to manipulate this default value*/
-  /*We want 10px for our font size so 10/16=0.625*/
-  font-size: 62.5%; }
+   /*It's a good practive to put the font size in percentrage beacause we still use the root font size of the browser (16px) and we let the ability to the user to manipulate this default value*/
+   /*We want 10px for our font size so 10/16=0.625*/
+  font-size: 62.5%;
+}
 
 /*set the project font inheritance*/
 body {
@@ -30,18 +42,26 @@ body {
   font-weight: 400;
   /*font-style: 16px;*/
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
   padding: 3rem;
   /*this property helps us include padding and border in the width and height of the element*/
   /*It's better to put it on the body so that we can inherit it for our entire layout*/
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .header {
   /*We make this elemenet in relative position to position the insides element mith absolute positioning*/
   position: relative;
+
   /*vh stands for viewport Height, the value is a percentage of the total height of the viewport*/
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image:
+  /*we have 2 background images, first the gradient the the image*/ linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero.jpg);
   background-size: cover;
   /*so that the top of the image is not cropped*/
   background-position: top;
@@ -50,18 +70,22 @@ body {
   src: https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path 
   clippy tools : https://bennettfeely.com/clippy/
   */
-  clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0 100%); }
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0 100%);
+}
 
 /*logo styling*/
 .header__logo-box {
   position: absolute;
   top: 4rem;
-  left: 4rem; }
+  left: 4rem;
+}
 
 .header__logo {
-  height: 3.5rem; }
+  height: 3.5rem;
+}
 
 /*heading primary*/
+
 .header__text-box {
   position: absolute;
   /*these coordinates are relative to the parent*/
@@ -69,14 +93,19 @@ body {
   left: 50%;
   /*these coordinates are relative to the element itself, not its parent*/
   transform: translate(-50%, -50%);
-  text-align: center; }
+
+  text-align: center;
+}
 
 .heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
+
   /*this property decides if the backpart of the element during animation is visible to the user src:https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility*/
   backface-visibility: hidden;
-  margin-bottom: 6rem; }
+
+  margin-bottom: 6rem;
+}
 
 .heading-primary--main {
   display: block;
@@ -85,52 +114,74 @@ body {
   letter-spacing: 3.5rem;
   animation-name: moveInLeft;
   animation-duration: 1s;
+
   animation-timing-function: ease-out;
   /*
   animation-delay: 3s;
   animation-iteration-count: 3;
-  */ }
+  */
+}
 
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.75rem;
-  animation: moveInRight 1s ease-out; }
+
+  animation: moveInRight 1s ease-out;
+}
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-10rem); }
+    transform: translateX(-10rem);
+  }
+
   80% {
-    transform: translateX(1rem); }
+    transform: translateX(1rem);
+  }
+
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(10rem); }
+    transform: translateX(10rem);
+  }
+
   80% {
-    transform: translateX(-1rem); }
+    transform: translateX(-1rem);
+  }
+
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translatey(3rem); }
+    transform: translatey(3rem);
+  }
+
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 
 /*button styling*/
+
 .btn--animated {
   animation: moveInBottom .5s ease-out .75s;
   /*the 0% animation style will be activate before the animation starts*/
-  animation-fill-mode: backwards; }
+  animation-fill-mode: backwards;
+}
 
 .btn:link,
 .btn:visited {
@@ -141,19 +192,23 @@ body {
   border-radius: 10rem;
   transition: all .2s;
   position: relative;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+}
 
 .btn:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  transform: translateY(-.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
 
 .btn:active {
-  transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  transform: translateY(-.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
 
 .btn--white {
-  background-color: #fff;
-  color: #777; }
+  background-color: $color-white;
+  color: $color-grey-dark;
+}
 
 /*pseudo element behave as their parents*/
 .btn::after {
@@ -166,11 +221,14 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all 0.4s; }
+  transition: all 0.4s;
+}
 
 .btn-white::after {
-  background-color: #fff; }
+  background-color: $color-white;
+}
 
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
+  opacity: 0;
+}
