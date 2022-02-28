@@ -156,3 +156,156 @@ body {
     /*these coordinates are relative to the element itself, not its parent*/
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.row {
+  max-width: 140rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    background-color: orangered;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-1-of-5 {
+    width: calc((100% - 4 *6rem) / 5); }
+  .row .col-1-of-6 {
+    width: calc((100% - 5 * 6rem) / 6); }
+  .row .col-1-of-7 {
+    width: calc((100% - 6 * 6rem) / 7); }
+  .row .col-1-of-8 {
+    width: calc((100% - 7 * 6rem) / 8); }
+  .row .col-1-of-9 {
+    width: calc((100% - 8 * 6rem) / 9); }
+  .row .col-1-of-10 {
+    width: calc((100% - 9 * 6rem) / 10); }
+  .row .col-1-of-11 {
+    width: calc((100% - 10 * 6rem) / 11); }
+  .row .col-1-of-12 {
+    width: calc((100% - 11 * 6rem) / 12); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-2-of-4 {
+    width: calc( (2 * (100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc( (3 * (100% - 3 * 6rem) / 4) + 2 * 6rem); }
+  .row .col-2-of-5 {
+    width: calc( (2 * (100% - 4 * 6rem) / 5) +  6rem); }
+  .row .col-3-of-5 {
+    width: calc( (3 * (100% - 4 * 6rem) / 5) + 2* 6rem); }
+  .row .col-4-of-5 {
+    width: calc( (4 * (100% - 4 * 6rem) / 5) + 3 * 6rem); }
+  .row .col-2-of-6 {
+    width: calc( (2 * (100% - 5 * 6rem) / 6) +  6rem); }
+  .row .col-3-of-6 {
+    width: calc( (3 * (100% - 5 * 6rem) / 6) + 2 * 6rem); }
+  .row .col-4-of-6 {
+    width: calc( (4 * (100% - 5 * 6rem) / 6) + 3 * 6rem); }
+  .row .col-5-of-6 {
+    width: calc( (5 * (100% - 5 * 6rem) / 6) + 4 * 6rem); }
+  .row .col-2-of-7 {
+    width: calc( (2 * (100% - 6 * 6rem) / 7) + 1* 6rem); }
+  .row .col-3-of-7 {
+    width: calc( (3 * (100% - 6 * 6rem) / 7) + 2 * 6rem); }
+  .row .col-4-of-7 {
+    width: calc( (4 * (100% - 6 * 6rem) / 7) + 3 * 6rem); }
+  .row .col-5-of-7 {
+    width: calc( (5 * (100% - 6 * 6rem) / 7) + 4 * 6rem); }
+  .row .col-6-of-7 {
+    width: calc( (5 * (100% - 6 * 6rem) / 7) + 5 * 6rem); }
+  .row .col-2-of-8 {
+    width: calc( (2 * (100% - 7 * 6rem) / 8) + 1* 6rem); }
+  .row .col-3-of-8 {
+    width: calc( (3 * (100% - 7 * 6rem) / 8) + 2 * 6rem); }
+  .row .col-4-of-8 {
+    width: calc( (4 * (100% - 7 * 6rem) / 8) + 3 * 6rem); }
+  .row .col-5-of-8 {
+    width: calc( (5 * (100% - 7 * 6rem) / 8) + 4 * 6rem); }
+  .row .col-6-of-8 {
+    width: calc( (6 * (100% - 7 * 6rem) / 8) + 5 * 6rem); }
+  .row .col-7-of-8 {
+    width: calc( (7 * (100% - 7 * 6rem) / 8) + 6 * 6rem); }
+  .row .col-2-of-9 {
+    width: calc( (2 * (100% - 8 * 6rem) / 9) + 1* 6rem); }
+  .row .col-3-of-9 {
+    width: calc( (3 * (100% - 8 * 6rem) / 9) + 2 * 6rem); }
+  .row .col-4-of-9 {
+    width: calc( (4 * (100% - 8 * 6rem) / 9) + 3 * 6rem); }
+  .row .col-5-of-9 {
+    width: calc( (5 * (100% - 8 * 6rem) / 9) + 4 * 6rem); }
+  .row .col-6-of-9 {
+    width: calc( (6 * (100% - 8 * 6rem) / 9) + 5 * 6rem); }
+  .row .col-7-of-9 {
+    width: calc( (7 * (100% - 8 * 6rem) / 9) + 6 * 6rem); }
+  .row .col-8-of-9 {
+    width: calc( (8 * (100% - 8 * 6rem) / 9) + 7 * 6rem); }
+  .row .col-2-of-10 {
+    width: calc( (2 * (100% - 9 * 6rem) / 10) + 1* 6rem); }
+  .row .col-3-of-10 {
+    width: calc( (3 * (100% - 9 * 6rem) / 10) + 2 * 6rem); }
+  .row .col-4-of-10 {
+    width: calc( (4 * (100% - 9 * 6rem) / 10) + 3 * 6rem); }
+  .row .col-5-of-10 {
+    width: calc( (5 * (100% - 9 * 6rem) / 10) + 4 * 6rem); }
+  .row .col-6-of-10 {
+    width: calc( (6 * (100% - 9 * 6rem) / 10) + 5 * 6rem); }
+  .row .col-7-of-10 {
+    width: calc( (7 * (100% - 9 * 6rem) / 10) + 6 * 6rem); }
+  .row .col-8-of-10 {
+    width: calc( (8 * (100% - 9 * 6rem) / 10) + 7 * 6rem); }
+  .row .col-9-of-10 {
+    width: calc( (9 * (100% - 9 * 6rem) / 10) + 8 * 6rem); }
+  .row .col-2-of-11 {
+    width: calc( (2 * (100% - 9 * 6rem) / 11) + 1* 6rem); }
+  .row .col-3-of-11 {
+    width: calc( (3 * (100% - 9 * 6rem) / 11) + 2 * 6rem); }
+  .row .col-4-of-11 {
+    width: calc( (4 * (100% - 9 * 6rem) / 11) + 3 * 6rem); }
+  .row .col-5-of-11 {
+    width: calc( (5 * (100% - 9 * 6rem) / 11) + 4 * 6rem); }
+  .row .col-6-of-11 {
+    width: calc( (6 * (100% - 9 * 6rem) / 11) + 5 * 6rem); }
+  .row .col-7-of-11 {
+    width: calc( (7 * (100% - 9 * 6rem) / 11) + 6 * 6rem); }
+  .row .col-8-of-11 {
+    width: calc( (8 * (100% - 9 * 6rem) / 11) + 7 * 6rem); }
+  .row .col-9-of-11 {
+    width: calc( (9 * (100% - 9 * 6rem) / 11) + 8 * 6rem); }
+  .row .col-10-of-11 {
+    width: calc( (10 * (100% - 10 * 6rem) / 11) + 9 * 6rem); }
+  .row .col-2-of-12 {
+    width: calc( (2 * (100% - 9 * 6rem) / 12) + 1* 6rem); }
+  .row .col-3-of-12 {
+    width: calc( (3 * (100% - 9 * 6rem) / 12) + 2 * 6rem); }
+  .row .col-4-of-12 {
+    width: calc( (4 * (100% - 9 * 6rem) / 12) + 3 * 6rem); }
+  .row .col-5-of-12 {
+    width: calc( (5 * (100% - 9 * 6rem) / 12) + 4 * 6rem); }
+  .row .col-6-of-12 {
+    width: calc( (6 * (100% - 9 * 6rem) / 12) + 5 * 6rem); }
+  .row .col-7-of-12 {
+    width: calc( (7 * (100% - 9 * 6rem) / 12) + 6 * 6rem); }
+  .row .col-8-of-12 {
+    width: calc( (8 * (100% - 9 * 6rem) / 12) + 7 * 6rem); }
+  .row .col-9-of-12 {
+    width: calc( (9 * (100% - 9 * 6rem) / 12) + 8 * 6rem); }
+  .row .col-10-of-12 {
+    width: calc( (10 * (100% - 10 * 6rem) / 12) + 9 * 6rem); }
+  .row .col-10-of-12 {
+    width: calc( (11 * (100% - 10 * 6rem) / 12) + 10 * 6rem); }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25em 0;
+  margin-top: -20vh; }
