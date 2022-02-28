@@ -42,3 +42,29 @@ body {
     animation: moveInRight 1s ease-out;
   }
 }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  //so we can see the linear gardient instead of the text color
+  color:transparent;
+
+  //to make the element width equal to its content
+  display: inline-block;
+
+  //use to add a linear gradient background color to the text
+  background-image: linear-gradient(to right, $color-primary-light,$color-primary-dark);
+  
+  //To clip the background image to the text
+  background-clip: text;
+
+  letter-spacing: .2rem;
+  transition: all .2s;
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba($color-black ,.2);
+  }
+}
