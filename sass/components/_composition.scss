@@ -4,7 +4,7 @@
   &__photo {
     //declare width of image in percentage to scale nicely to the viewport
     width: 55%;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    box-shadow: $box-shadow-medium;
     position: absolute;
     z-index: 10;
     transition: all 0.2s;
@@ -28,7 +28,7 @@
     &:hover {
       outline: 1.5rem solid $color-primary-light;
       transform: scale(1.05) translateY(-.5rem);
-      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      box-shadow: $box-shadow-strong;
       z-index: 20;
     }
   }
