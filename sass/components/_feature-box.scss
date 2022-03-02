@@ -16,6 +16,7 @@
       $color-primary-dark
     );
     color: transparent;
+    //https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip
     background-clip: text;
     display: inline-block;
   }

@@ -19,6 +19,7 @@
   src: https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path 
   clippy tools : https://bennettfeely.com/clippy/
   */
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0 100%);
   clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0 100%);
   /*logo styling*/
   &__logo-box {
@@ -42,4 +43,3 @@
     text-align: center;
   }
 }
-
