@@ -1,0 +1,50 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba($color-black, .1);
+  background-color: $color-white;
+  border-radius: 3px;
+  padding: 6rem;
+  //6 (initial padding)+3 (the translateX padding) rem padding
+  padding-left: 9rem;
+  font-size: $default-font-size;
+
+  transform: skewX(-12deg);
+
+  //It doesnt work as expected because the precedence of the translateX of the shape element, we have to declare it in the shape element itself along with the translateX
+  /*
+  & > * {
+    transform: skew(12deg);
+  }
+  */
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    background-color: orangered;
+    float: left;
+
+    //https://developer.mozilla.org/en-US/docs/Web/CSS/shape-outside
+    //this property is aimed at shape the text around the element
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+
+    //We need the clipart property to make the shape we want
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+
+    //The way to move an element with floated
+    transform: translateX(-3rem) skew(12deg);
+  }
+
+  &__img {
+    //the 100% of the parent width but the image is wider than its height so the image is cropped
+    //width: 100%;
+    //We the need to correspond to the height of the parent, so:
+    height: 100%;
+  }
+
+  &__text {
+    transform: skew(12deg);
+  }
+}
