@@ -20,7 +20,7 @@
     //https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility
     backface-visibility: hidden;
 
-    border-radius: 3px;
+    border-radius: $border-radius-light;
     box-shadow: $box-shadow-light;
 
     &--front {
