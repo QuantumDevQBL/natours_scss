@@ -18,6 +18,7 @@
     color: transparent;
     //https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip
     background-clip: text;
+    -webkit-background-clip: text;
     display: inline-block;
   }
 

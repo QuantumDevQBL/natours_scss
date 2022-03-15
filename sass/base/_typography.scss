@@ -59,6 +59,7 @@ body {
   
   //To clip the background image to the text
   background-clip: text;
+  -webkit-background-clip: text;
 
   letter-spacing: .2rem;
   transition: all .2s;
