@@ -75,7 +75,7 @@
   &__radio-button {
     height: 3rem;
     width: 3rem;
-    border: 5px solid $primary-color;
+    border: 5px solid $color-primary;
     border-radius: 50%;
     display: inline-block;
     position: absolute;
@@ -92,7 +92,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: $primary-color;
+      background-color: $color-primary;
       opacity: 0;
       transition: opacity .2s;
     }
