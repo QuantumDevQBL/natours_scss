@@ -14,7 +14,8 @@ html {
   /*font-size: 10px;*/
   /*It's a good practive to put the font size in percentrage beacause we still use the root font size of the browser (16px) and we let the ability to the user to manipulate this default value*/
   /*We want 10px for our font size so 10/16=0.625*/
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
 
 /*set the project font inheritance*/
 body {
@@ -497,19 +498,25 @@ body {
   top: 0;
   left: 0;
   position: fixed;
-  z-index: 2002; }
+  z-index: 2002;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s; }
   .popup__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
     background-color: #fff;
     position: absolute;
     width: 75%;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     border-radius: 0.3rem;
     overflow: hidden;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    display: table; }
+    display: table;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.25);
+    transition: all .4s; }
   .popup__left {
     width: 33.333333%;
     display: table-cell; }
@@ -534,6 +541,24 @@ body {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__close:link, .popup__close:visited {
+    color: #777;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 3rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .2s;
+    line-height: 1; }
+  .popup__close:hover {
+    color: #55c57a; }
 
 .header {
   /*We make this elemenet in relative position to position the insides element mith absolute positioning*/

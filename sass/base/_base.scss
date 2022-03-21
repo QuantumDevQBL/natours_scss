@@ -16,6 +16,7 @@ html {
   /*It's a good practive to put the font size in percentrage beacause we still use the root font size of the browser (16px) and we let the ability to the user to manipulate this default value*/
   /*We want 10px for our font size so 10/16=0.625*/
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 /*set the project font inheritance*/
