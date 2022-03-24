@@ -1,3 +1,24 @@
+/**
+Desktop first approach
+
+0 - 600px = Phone
+600 - 900px     = Tablet portrait
+900 - 1200px     = Tablet landscape
+1200 - 1800px   = Normal style
+1800px         = big desktop
+
+/**
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+rem and em units in media queries are affected by the font size of the browser, not the root one !!! 
+
+We so privilegiate em because rem are not supported by some of the browsers !!!
+
+1em = 16px !!!
+*/
 /*reset size of all elements using this universal selector*/
 *,
 *::after,
@@ -14,8 +35,18 @@ html {
   /*font-size: 10px;*/
   /*It's a good practive to put the font size in percentrage beacause we still use the root font size of the browser (16px) and we let the ability to the user to manipulate this default value*/
   /*We want 10px for our font size so 10/16=0.625*/
+  /*For responsive design concern we used a trick that makes all of our layout dependant of our font-size, so in the media queries, when we changethe root font-size we manage to modify th ENTIRE LAYOUT, it's a huge improvement*/
   font-size: 62.5%;
   scroll-behavior: smooth; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 /*set the project font inheritance*/
 body {
