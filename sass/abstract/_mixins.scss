@@ -19,8 +19,8 @@
 Desktop first approach
 
 0 - 600px = Phone
-600 - 900px     = Tablet portrait
-900 - 1200px     = Tablet landscape
+600  - 900px     = Tablet portrait
+900  - 1200px     = Tablet landscape
 1200 - 1800px   = Normal style
 1800px         = big desktop
 
@@ -33,6 +33,8 @@ Desktop first approach
 rem and em units in media queries are affected by the font size of the browser, not the root one !!! 
 
 We so privilegiate em because rem are not supported by some of the browsers !!!
+
+ORDER: Base + Typography > General Layout + grid > page layout > components
 
 1em = 16px !!!
 */
