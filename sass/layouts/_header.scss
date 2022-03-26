@@ -10,7 +10,22 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
+    url(../img/hero-small.jpg);
+
+    /*Target resolution screen and resolution screen
+    Logic in media-queries: https://css-tricks.com/logic-in-css-media-queries/
+    */
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+         (min-width: 125em) {
+    background-image:
+  /*we have 2 background images, first the gradient the the image*/ linear-gradient(
+      to right bottom,
+      rgba($color-secondary-light, 0.8),
+      rgba($color-secondary-dark, 0.8)
+    ),
     url(../img/hero.jpg);
+  }
+
   background-size: cover;
   /*so that the top of the image is not cropped*/
   background-position: top;
@@ -24,7 +39,7 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     height: 95vh;
-}
+  }
 
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0 100%);
   clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0 100%);
@@ -34,8 +49,8 @@
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 
     margin-bottom: 2rem;
-}
-  
+  }
+
   /*logo styling*/
   &__logo-box {
     position: absolute;
