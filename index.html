@@ -39,7 +39,9 @@
             >
           </li>
           <li class="navigation__item">
-            <a href="#section-stories" class="navigation__link"><span>04</span> Stories</a>
+            <a href="#section-stories" class="navigation__link"
+              ><span>04</span> Stories</a
+            >
           </li>
           <li class="navigation__item">
             <a href="#" class="navigation__link"><span>05</span> Book now</a>
@@ -49,14 +51,19 @@
     </div>
     <header class="header">
       <div class="header__logo-box">
-        <img src="img/logo-white.png" alt="logo" class="header__logo" />
+        <img 
+        src="img/logo-white.png" 
+        alt="logo" 
+        class="header__logo" />
       </div>
       <div class="header__text-box">
         <h1 class="heading-primary">
           <span class="heading-primary--main">Outdoors</span>
           <span class="heading-primary--sub">is where life happens</span>
         </h1>
-        <a href="#section-tours" class="btn btn--white btn--animated">Discover our tours</a>
+        <a href="#section-tours" class="btn btn--white btn--animated"
+          >Discover our tours</a
+        >
       </div>
     </header>
     <main>
@@ -85,18 +92,31 @@
           </div>
           <div class="col-1-of-2">
             <div class="composition">
+              <!--900/width of the image = 20vw; 600/width of the image = 30vw
+              Both resolution switching and density switching
+              Viewport width = resolution switching
+              Pixel density = density switching
+              -->
               <img
+                class="composition__photo composition__photo--p1"
                 src="img/nat-1-large.jpg"
                 alt="Photo 1"
-                class="composition__photo composition__photo--p1"
-              /><img
-                src="img/nat-2-large.jpg "
-                alt="Photo 2"
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="(max-width: 900px) 20vw, (max-width600px) 30vw, 300px"
+              />
+              <img
                 class="composition__photo composition__photo--p2"
-              /><img
+                src="img/nat-2-large.jpg"
+                alt="Photo 2"
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width: 900px) 20vw, (max-width600px) 30vw, 300px"
+              />
+              <img
+                class="composition__photo composition__photo--p3"
                 src="img/nat-3-large.jpg"
                 alt="Photo 3"
-                class="composition__photo composition__photo--p3"
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width: 900px) 20vw, (max-width600px) 30vw, 300px"
               />
             </div>
           </div>
@@ -272,8 +292,10 @@
             <figure class="story__shape">
               <img
                 class="story__img"
-                src="img/nat-8.jpg"
+                src="img/nat-8-large.jpg"
                 alt="Person on a tour"
+                srcset="img/nat-8.jpg 300w, img/nat-8-large.jpg 1000w"
+                sizes="(max-width: 900px) 20vw, (max-width600px) 30vw, 300px"
               />
               <figcaption class="story__caption">Mary smith</figcaption>
             </figure>
@@ -295,8 +317,10 @@
             <figure class="story__shape">
               <img
                 class="story__img"
-                src="img/nat-9.jpg"
+                src="img/nat-9-large.jpg"
                 alt="Person on a tour"
+                srcset="img/nat-9.jpg 300w, img/nat-9-large.jpg 1000w"
+                sizes="(max-width: 900px) 20vw, (max-width600px) 30vw, 300px"
               />
               <figcaption class="story__caption">Jack Wilson</figcaption>
             </figure>
@@ -385,11 +409,20 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-
-<picture class="footer__logo">
-  <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
-  <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo"  />
-</picture>
+        <picture class="footer__logo">
+          <source
+            srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5em)"
+          />
+          <img
+            src="img/logo-green-1x.png"
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            alt="Full logo"
+          />
+        </picture>
 
         <!-- Density switching https://cloudfour.com/thinks/responsive-images-101-part-3-srcset-display-density/ 
         <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo"  />
@@ -419,9 +452,9 @@
         </div>
         <div class="col-1-of-2">
           <p class="footer__copyright">
-            Built by <a href="#" class="footer__link">Quentin Balohé</a> for his
-            online learning
-            <a href="https://qtdev.fr" class="footer__link">Qtdev.fr</a>.
+            Built by <a href="#" class="footer__link"> Quentin Balohé </a> for
+            his online learning
+            <a href="https://qtdev.fr" class="footer__link"> Qtdev.fr </a>.
           </p>
         </div>
       </div>
@@ -430,17 +463,38 @@
     <div class="popup" id="popup">
       <div class="popup__content">
         <div class="popup__left">
-          <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img" />
-          <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img" />
+          <img 
+          src="img/nat-8-large.jpg" 
+          alt="Tour photo" 
+          class="popup__img"
+          srcset="img/nat-8.jpg 300w, img/nat-8-large.jpg 1000w"
+          sizes="(max-width: 900px) 20vw, (max-width600px) 30vw, 300px"
+          />
+          <img 
+          src="img/nat-9-large.jpg" 
+          alt="Tour photo" 
+          class="popup__img"
+          srcset="img/nat-9.jpg 300w, img/nat-9-large.jpg 1000w"
+          sizes="(max-width: 900px) 20vw, (max-width600px) 30vw, 300px"
+          />
         </div>
         <div class="popup__right">
           <a href="#section-tours" class="popup__close">&times;</a>
-          <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+          <h2 class="heading-secondary u-margin-bottom-small">
+            Start booking now
+          </h2>
           <h3 class="heading-tertiary u-margin-bottom-small">
             Important &ndash; Please read these terms before booking
           </h3>
           <p class="popup__text">
-            Vulputate augue orci tincidunt sociis ipsum accumsan nibh purus, egestas pellentesque quam aliquam vel fames turpis pulvinar, pharetra sapien massa donec ultricies sollicitudin dapibus. Commodo in lobortis pretium elit pharetra sit class habitasse, semper nisl leo suspendisse dui quisque molestie. Nullam himenaeos felis nisi feugiat fermentum vivamus eget curae non libero pretium est habitant, quisque lobortis turpis posuere nostra dis habitasse bibendum volutpat sociis ad eu. 
+            Vulputate augue orci tincidunt sociis ipsum accumsan nibh purus,
+            egestas pellentesque quam aliquam vel fames turpis pulvinar,
+            pharetra sapien massa donec ultricies sollicitudin dapibus. Commodo
+            in lobortis pretium elit pharetra sit class habitasse, semper nisl
+            leo suspendisse dui quisque molestie. Nullam himenaeos felis nisi
+            feugiat fermentum vivamus eget curae non libero pretium est
+            habitant, quisque lobortis turpis posuere nostra dis habitasse
+            bibendum volutpat sociis ad eu.
           </p>
           <a href="#" class="btn btn--green">Book now</a>
         </div>
