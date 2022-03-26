@@ -1,8 +1,8 @@
 .story {
   width: 75%;
   margin: 0 auto;
-  box-shadow: 0 3rem 6rem rgba($color-black, .1);
-  background-color: rgba($color-white, .6);
+  box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  background-color: rgba($color-white, 0.6);
   border-radius: $border-radius-light;
   padding: 6rem;
   //6 (initial padding)+3 (the translateX padding) rem padding
@@ -14,6 +14,16 @@
 
   &:not(:last-child) {
     margin-bottom: 4rem;
+  }
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0deg);
   }
 
   //It doesnt work as expected because the precedence of the translateX of the shape element, we have to declare it in the shape element itself along with the translateX
@@ -39,6 +49,10 @@
 
     //The way to move an element with floated
     transform: translateX(-3rem) skew(12deg);
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skew(0);
+    }
   }
 
   &__img {
@@ -47,13 +61,17 @@
     //We the need to correspond to the height of the parent, so:
     height: 100%;
     backface-visibility: hidden;
-    transition: all .8s;
+    transition: all 0.8s;
 
     transform: translateX(-4rem) scale(1.4);
   }
 
   &__text {
     transform: skew(12deg);
+
+    @include respond(phone) {
+      transform: skew(0deg);
+    }
   }
 
   &__caption {
@@ -65,7 +83,7 @@
     text-transform: uppercase;
     font-size: 1.7rem;
     text-align: center;
-    transition: all .8s;
+    transition: all 0.8s;
     opacity: 0;
     backface-visibility: hidden;
   }
