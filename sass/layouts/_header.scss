@@ -3,7 +3,7 @@
   position: relative;
 
   /*vh stands for viewport Height, the value is a percentage of the total height of the viewport*/
-  height: 95vh;
+  height: 85vh;
   background-image:
   /*we have 2 background images, first the gradient the the image*/ linear-gradient(
       to right bottom,
@@ -19,13 +19,21 @@
   src: https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path 
   clippy tools : https://bennettfeely.com/clippy/
   */
+
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    height: 95vh;
+}
+
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0 100%);
   clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0 100%);
 
-@include respond(phone) {
-  height: 50vh;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 45vh, 0 100%);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 45vh, 0 100%);
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+
+    margin-bottom: 2rem;
 }
   
   /*logo styling*/
