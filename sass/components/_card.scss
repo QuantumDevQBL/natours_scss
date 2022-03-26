@@ -89,15 +89,16 @@
         ),
         url(../img/nat-5.jpg);
 
-        @media (min-resolution: 192dpi) and (min-width: 37.5em),
+      @media (min-resolution: 192dpi) and (min-width: 37.5em),
+        (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
         (min-width: 125em) {
-          background-image: linear-gradient(
+        background-image: linear-gradient(
             to right bottom,
             $color-secondary-light,
             $color-secondary-dark
           ),
           url(../img/nat-5-large.jpg);
-        }
+      }
     }
 
     &--2 {
@@ -108,15 +109,16 @@
         ),
         url(../img/nat-6.jpg);
 
-        @media (min-resolution: 192dpi) and (min-width: 37.5em),
+      @media (min-resolution: 192dpi) and (min-width: 37.5em),
+        (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
         (min-width: 125em) {
-          background-image: linear-gradient(
+        background-image: linear-gradient(
             to right bottom,
             $color-primary-light,
             $color-primary-dark
           ),
           url(../img/nat-6-large.jpg);
-        }
+      }
     }
 
     &--3 {
@@ -127,15 +129,16 @@
         ),
         url(../img/nat-7.jpg);
 
-        @media (min-resolution: 192dpi) and (min-width: 37.5em),
+      @media (min-resolution: 192dpi) and (min-width: 37.5em),
+        (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
         (min-width: 125em) {
-          background-image: linear-gradient(
+        background-image: linear-gradient(
             to right bottom,
             $color-tertiary-light,
             $color-tertiary-dark
           ),
           url(../img/nat-7-large.jpg);
-        }
+      }
     }
   }
 
